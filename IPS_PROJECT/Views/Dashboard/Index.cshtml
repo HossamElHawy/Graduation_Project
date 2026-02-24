@@ -1,0 +1,233 @@
+﻿@model IPS_PROJECT.ViewModels.DashboardViewModel
+@{
+    ViewData["Title"] = "IPS Admin Console - AI-Based IPS";
+    ViewData["PageCss"] = "dashboard.css";
+}
+
+<!-- For outo Refreshing -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
+
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-badge" aria-hidden="true">
+                    <i class="fa-solid fa-shield"></i>
+                </div>
+                <div class="brand-title">AI-Based IPS</div>
+            </div>
+
+            <nav class="nav" aria-label="Sidebar">
+                <a class="active" href="#" aria-current="page"><i class="fa-solid fa-table-cells"></i>Overview</a>
+            </nav>
+
+            <div class="sidebar-footer">SYSTEM v3.6.1</div>
+        </aside>
+
+        <!-- Main -->
+        <main class="main">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div class="search" role="search">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <input type="text" placeholder="Global search for threats, IPs, or logs..." aria-label="Global search" />
+                </div>
+
+                <div class="top-actions">
+                    <div class="segmented" role="tablist" aria-label="View mode">
+                        <button class="active" id="adminViewBtn" role="tab" aria-selected="true" type="button">Admin View</button>
+                        <button id="userViewBtn" role="tab" aria-selected="false" type="button">User View</button>
+                    </div>
+
+
+                    <div class="notification-wrapper" style="position: relative; margin-right: 20px;">
+                        <button class="noti-btn" id="notiBtn" style="background: var(--panel-2); border: 1px solid var(--border); color: var(--text); padding: 10px; border-radius: 10px; cursor: pointer; position: relative;">
+                            <i class="fa-solid fa-bell"></i>
+                            @if (Model.AlertNotifications != null && Model.AlertNotifications.Any(n => !n.IsRead))
+                              {
+                            <span class="noti-badge pulse-animation" id="notiBadge">
+                                @Model.AlertNotifications.Count(n => !n.IsRead)
+                            </span>
+                              }
+                             else
+                              {
+                            <span class="noti-badge" id="notiBadge" style="display: none;">0</span>
+                              }
+                        </button>
+
+                        <div class="noti-dropdown hidden" id="notiDropdown" style="position: absolute; right: 0; top: 50px; width: 350px; background: var(--panel-2); border: 1px solid var(--border); border-radius: var(--radius); z-index: 1000; box-shadow: var(--shadow);">
+                            <div class="noti-header" style="padding: 15px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+                                <h3 style="margin:0; font-size: 1rem;">Notifications</h3>
+                                <button onclick="apiClearAll()" style="background:none; border:none; color:var(--blue); cursor:pointer; font-size: 12px;">Clear All</button>
+                            </div>
+                            <div class="noti-body" id="notiItems" style="max-height: 400px; overflow-y: auto;">
+                                @foreach (var alert in Model.AlertNotifications)
+                                 {
+                                <div class="noti-item" style="padding: 12px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <p style="margin:0; font-size: 13px; color: var(--red); font-weight: bold;">@alert.AttackType</p>
+                                        <small style="color: var(--muted);">@alert.SourceIp - @alert.Timestamp.ToString("HH:mm")</small>
+                                    </div>
+                                    <div style="display: flex; gap: 5px;">
+                                        <button onclick="showDetails(@alert.Id)" style="background:none; border:1px solid var(--blue); color:var(--blue); font-size:10px; padding:2px 5px; border-radius:4px; cursor:pointer;">Read More</button>
+                                        <button onclick="apiDeleteOne(@alert.Id)" style="background:none; border:none; color:var(--muted); cursor:pointer;">&times;</button>
+                                    </div>
+                                </div>
+                                 }
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="detailsModal" class="modal-overlay hidden" style="position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 9999; display: flex; align-items: center; justify-content: center;">
+                        <div class="modal-content" style="background: var(--panel-2); width: 450px; padding: 20px; border-radius: 12px; border: 1px solid var(--border);">
+                            <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border); padding-bottom:10px; margin-bottom:15px;">
+                                <h3 style="margin:0">Attack Details</h3>
+                                <button onclick="closeModal()" style="background:none; border:none; color:white; font-size:20px; cursor:pointer;">&times;</button>
+                            </div>
+                            <div id="modalBody"></div>
+                        </div>
+                    </div>
+
+                    <div class="avatar" aria-label="User menu">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content">
+                <!-- Page header -->
+                <div class="page-head">
+                    <div>
+                        <h1 class="page-title">IPS Admin Console</h1>
+                        <p class="page-subtitle">Real-time threat detection and mitigation system status</p>
+                    </div>
+
+                    <div class="head-actions">
+                        <button class="btn" type="button" onclick="downloadReport()">
+                            <i class="fa-solid fa-download"></i>
+                            Export Logs
+                        </button>
+
+                        <button class="btn primary" type="button">
+                            <i class="fa-solid fa-rotate"></i>
+                            Retrain Model
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <section class="stats" aria-label="Summary stats">
+                    <div class="card stat">
+                        <div>
+                            <div class="label">Total Events</div>
+                            <div class="value">@Model.TotalEvents</div>
+                            <div class="hint good"><i class="fa-solid fa-arrow-trend-up"></i> +12.5% vs last hour</div>
+                        </div>
+                        <div class="icon blue" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></div>
+                    </div>
+
+                    <div class="card stat">
+                        <div>
+                            <div class="label">Threats Blocked</div>
+                            <div class="value" style="color: rgba(239,68,68,0.95);">@Model.ThreatsBlocked</div>
+                            <div class="hint bad"><i class="fa-solid fa-triangle-exclamation"></i> 5 critical threats</div>
+                        </div>
+                        <div class="icon pink" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
+                    </div>
+
+                    <div class="card stat">
+                        <div>
+                            <div class="label">Benign Traffic</div>
+                            <div class="value" style="color: rgba(16,185,129,0.95);">@Model.BenignTraffic</div>
+                            <div class="hint"><i class="fa-regular fa-circle-check"></i> No latency issues</div>
+                        </div>
+                        <div class="icon green" aria-hidden="true"><i class="fa-solid fa-circle-check"></i></div>
+                    </div>
+
+
+                </section>
+
+
+                <!-- Table -->
+                <section class="card table-card" aria-label="Recent detection events">
+                    <div class="table-head">
+                        <div class="table-title">Recent Detection Events</div>
+                        <div class="table-filter">
+                            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                            <input id="tableFilter" type="text" placeholder="Filter by IP..." aria-label="Filter by IP" />
+                        </div>
+                    </div>
+
+                    <div style="overflow:auto;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>TIMESTAMP</th>
+                                    <th>SOURCE IP</th>
+                                    <th>DESTINATION IP</th>
+                                    <th>ATTACK TYPE</th>
+                                    <th>PREDICTION</th>
+                                    <th>CONFIDENCE</th>
+                                    <th>STATUS</th>
+                                </tr>
+                            </thead>
+                            <tbody id="eventsBody">
+
+                                @foreach (var e in Model.RecentEvents)
+                                {
+                                <tr>
+                                    <td class="mono dim">@e.Timestamp</td>
+                                    <td class="mono ip"><a href="#" data-ip="192.168.1.104">@e.SourceIp</a></td>
+                                    <td class="mono dim">@e.DestinationIp</td>
+                                    <td>@e.TrafficType</td>
+                                    <td><span class="badge mal">@e.Prediction</span></td>
+                                    <td>
+                                        <div class="conf">
+                                            <div class="bar"><span style="width:98%"></span></div>
+                                            <div class="pct">@e.Confidence</div>
+                                        </div>
+                                    </td>
+                                    <td><span class="status-pill blocked"><i class="fa-solid fa-ban"></i>@e.Status</span></td>
+                                </tr>
+                                }
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-foot">
+                        <div>Showing 3 of 1,247 events</div>
+                        <div class="pager" aria-label="Pagination">
+                            <span class="link">Previous</span>
+                            <span class="page active">1</span>
+                            <span class="link">2</span>
+                            <span class="link">3</span>
+                            <span class="link">Next</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div>© 2023 Enterprise Cybersecurity Solutions Inc. All rights reserved.</div>
+                <div class="footer-links">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Support</a>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+
+
+
+</body>

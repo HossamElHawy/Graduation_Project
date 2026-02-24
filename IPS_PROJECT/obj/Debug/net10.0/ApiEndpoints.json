@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "IPS_PROJECT.Controllers.TrafficController",
+    "Method": "ProcessTraffic",
+    "RelativePath": "api/Traffic/ProcessTraffic",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rawData",
+        "Type": "System.Text.Json.JsonElement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
