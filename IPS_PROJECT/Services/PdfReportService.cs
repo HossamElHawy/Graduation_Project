@@ -7,8 +7,40 @@ namespace IPS_PROJECT.Services
 {
     public class PdfReportService
     {
-        public byte[] GenerateExecutiveReport(List<EVENTS> events, int totalThreats, int benignCount)
+        public byte[] GenerateExecutiveReport(List<EVENTS> events, int totalThreats, int benignCount, string range, DateTime? start = null, DateTime? end = null)
         {
+            
+            string currentRange = range?.ToLower().Trim() ?? "default";
+
+            string mainTitle = "IPS SECURITY REPORT";
+            string periodDescription = "";
+
+            
+            switch (currentRange)
+            {
+                case "today":
+                    mainTitle = "DAILY IPS SECURITY REPORT";
+                    periodDescription = $"Data for Today: {DateTime.Today:yyyy-MM-dd}";
+                    break;
+                case "week":
+                    mainTitle = "WEEKLY IPS SECURITY REPORT";
+                    periodDescription = $"Last 7 Days: {DateTime.Today.AddDays(-7):yyyy-MM-dd} to {DateTime.Today:yyyy-MM-dd}";
+                    break;
+                case "month":
+                    mainTitle = "MONTHLY IPS SECURITY REPORT";
+                    periodDescription = $"Last 30 Days: {DateTime.Today.AddMonths(-1):yyyy-MM-dd} to {DateTime.Today:yyyy-MM-dd}";
+                    break;
+                case "custom":
+                    mainTitle = "CUSTOM RANGE SECURITY REPORT";
+                    periodDescription = $"Period: {(start.HasValue ? start.Value.ToString("yyyy-MM-dd") : "N/A")} to {(end.HasValue ? end.Value.ToString("yyyy-MM-dd") : "N/A")}";
+                    break;
+                default:
+                    
+                    mainTitle = "IPS GENERAL STATUS REPORT";
+                    periodDescription = $"Analysis of {events.Count} Recorded Events";
+                    break;
+            }
+
             return Document.Create(container =>
             {
                 container.Page(page =>
@@ -17,21 +49,36 @@ namespace IPS_PROJECT.Services
                     page.PageColor(Colors.White);
                     page.DefaultTextStyle(x => x.FontSize(10).FontFamily(Fonts.Verdana));
 
-                   
                     page.Header().Row(row =>
                     {
                         row.RelativeItem().Column(col =>
                         {
-                            col.Item().Text("AI-BASED IPS REPORT").FontSize(22).SemiBold().FontColor(Colors.Blue.Medium);
-                            col.Item().Text($"Report Period: Last 100 Events | Generated: {DateTime.Now:f}").FontSize(9).Italic();
+                            col.Item().Text(mainTitle)
+                                .FontSize(20)
+                                .SemiBold()
+                                .FontColor(Colors.Blue.Medium);
+
+                            col.Item().Text(text =>
+                            {
+                                text.Span("Report Scope: ").SemiBold();
+                                text.Span(periodDescription);
+                            });
+
+                            col.Item().Text(text =>
+                            {
+                                text.Span("Generated On: ").SemiBold().FontSize(9);
+                                text.Span($"{DateTime.Now:f}").Italic().FontSize(9);
+                            });
                         });
-                        row.ConstantItem(100).AlignCenter().Text("CONFIDENTIAL").FontColor(Colors.Red.Medium).Bold();
+
+                        row.ConstantItem(100).AlignCenter().Text("CONFIDENTIAL")
+                            .FontColor(Colors.Red.Medium)
+                            .Bold();
                     });
 
-                    // 2. Content Area
                     page.Content().PaddingVertical(15).Column(col =>
                     {
-                        // Summary Cards 
+                        // Summary Cards
                         col.Item().Row(row =>
                         {
                             row.RelativeItem().Padding(5).Background(Colors.Grey.Lighten4).Column(c => {
@@ -48,18 +95,20 @@ namespace IPS_PROJECT.Services
                             });
                         });
 
-                        col.Item().PaddingTop(20).Text("Detailed Detection Logs").FontSize(14).SemiBold().Underline();
+                        col.Item().PaddingTop(20).Text($"Detailed Logs Analysis ({currentRange.ToUpper()})")
+                            .FontSize(14)
+                            .SemiBold()
+                            .Underline();
 
-                        // 3. Table of Logs (الجدول التقني)
                         col.Item().PaddingTop(10).Table(table =>
                         {
                             table.ColumnsDefinition(columns =>
                             {
-                                columns.RelativeColumn(3); // Time
-                                columns.RelativeColumn(3); // Source
-                                columns.RelativeColumn(2); // Attack
-                                columns.RelativeColumn(2); // Conf%
-                                columns.RelativeColumn(2); // Status
+                                columns.RelativeColumn(3);
+                                columns.RelativeColumn(3);
+                                columns.RelativeColumn(2);
+                                columns.RelativeColumn(2);
+                                columns.RelativeColumn(2);
                             });
 
                             table.Header(header =>
@@ -89,12 +138,11 @@ namespace IPS_PROJECT.Services
                         });
                     });
 
-                    // Footer
                     page.Footer().AlignCenter().Text(x =>
                     {
                         x.Span("Page ");
                         x.CurrentPageNumber();
-                        x.Span(" | IPS System v3.6.1 Professional Report");
+                        x.Span($" | IPS System v3.6.1 | Filter: {currentRange}");
                     });
                 });
             }).GeneratePdf();

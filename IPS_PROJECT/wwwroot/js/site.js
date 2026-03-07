@@ -139,3 +139,110 @@ async function apiClearAll() {
 function downloadReport() {
     window.open('/api/Reports/DownloadLogsPdf', '_blank');
 }
+
+
+/*
+   Export Logs Filtering
+ */
+
+
+function toggleCustomDates() {
+    const rangeSelect = document.getElementById('reportRange');
+    const customDiv = document.getElementById('customDateInputs');
+
+    if (rangeSelect && customDiv) {
+       
+        if (rangeSelect.value === 'custom') {
+            customDiv.style.display = 'flex';
+        } else {
+            customDiv.style.display = 'none';
+        }
+    }
+}
+
+
+function downloadFilteredReport() {
+    
+    const rangeElement = document.getElementById('reportRange');
+    const startElement = document.getElementById('startDate');
+    const endElement = document.getElementById('endDate');
+
+    if (!rangeElement) {
+        console.error("Element 'reportRange' not found!");
+        return;
+    }
+
+    const range = rangeElement.value;
+    let url = `/api/Reports/DownloadLogsPdf?range=${range}`;
+
+    if (range === 'custom') {
+        const startValue = startElement ? startElement.value : "";
+        const endValue = endElement ? endElement.value : "";
+
+  
+        console.log("Start Date:", startValue, "End Date:", endValue);
+
+        if (!startValue || !endValue) {
+            alert("⚠️ Please select both Start and End dates.");
+            return;
+        }
+        url += `&start=${startValue}&end=${endValue}`;
+    }
+
+    
+    window.open(url, '_blank');
+}
+
+
+function toggleCustomDates() {
+    const rangeSelect = document.getElementById('reportRange');
+    const customDiv = document.getElementById('customDateInputs');
+
+    if (rangeSelect && customDiv) {
+       
+        customDiv.style.display = (rangeSelect.value === 'custom') ? 'flex' : 'none';
+    }
+}
+
+function downloadFilteredReport() {
+    const rangeElement = document.getElementById('reportRange');
+    const startInput = document.getElementById('startDate');
+    const endInput = document.getElementById('endDate');
+
+    if (!rangeElement) {
+        console.error("Element 'reportRange' not found!");
+        return;
+    }
+
+    const range = rangeElement.value;
+    let url = `/api/Reports/DownloadLogsPdf?range=${range}`;
+
+    if (range === 'custom') {
+        const start = startInput.value; 
+        const end = endInput.value;
+
+        if (!start || !end) {
+            alert("⚠️ Please select both Start and End dates.");
+            return;
+        }
+
+        
+        if (new Date(start) > new Date(end)) {
+            alert("⚠️ Start date cannot be later than End date.");
+            return;
+        }
+
+        url += `&start=${encodeURIComponent(start)}&end=${encodeURIComponent(end)}`;
+    }
+
+    
+    console.log("Requesting Report from:", url);
+
+    
+    const downloadWindow = window.open(url, '_blank');
+
+    
+    if (!downloadWindow) {
+        window.location.href = url;
+    }
+}

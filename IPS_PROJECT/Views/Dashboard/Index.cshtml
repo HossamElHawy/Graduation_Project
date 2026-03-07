@@ -107,15 +107,36 @@
                         <p class="page-subtitle">Real-time threat detection and mitigation system status</p>
                     </div>
 
-                    <div class="head-actions">
-                        <button class="btn" type="button" onclick="downloadReport()">
-                            <i class="fa-solid fa-download"></i>
-                            Export Logs
-                        </button>
+                    <div class="head-actions" style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                        <div class="export-group" style="display: flex; align-items: center; background: var(--panel-2); padding: 6px 14px; border-radius: var(--radius); border: 1px solid var(--border); transition: all 0.3s ease;">
 
-                        <button class="btn primary" type="button">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <i class="fa-solid fa-calendar-alt" style="color: var(--blue); font-size: 14px;"></i>
+                                <select id="reportRange" onchange="toggleCustomDates()"
+                                        style="background: none; border: none; color: var(--text); font-size: 14px; outline: none; cursor: pointer; padding-right: 5px;">
+                                    <option value="today" style="background: var(--panel-2);">Today</option>
+                                    <option value="week" style="background: var(--panel-2);">Last Week</option>
+                                    <option value="month" style="background: var(--panel-2);">Last Month</option>
+                                    <option value="custom" style="background: var(--panel-2);">Custom Range</option>
+                                </select>
+                            </div>
+
+                            <div id="customDateInputs" style="display: none; align-items: center; gap: 8px; border-left: 1px solid var(--border); padding-left: 12px; margin-left: 8px;">
+                                <input type="date" id="startDate" class="custom-date-picker" title="Start Date">
+                                <span style="color: var(--muted2); font-size: 12px;">to</span>
+                                <input type="date" id="endDate" class="custom-date-picker" title="End Date">
+                            </div>
+
+                            <button class="btn-export-action" type="button" onclick="downloadFilteredReport()"
+                                    style="background: none; border: none; color: var(--blue); cursor: pointer; border-left: 1px solid var(--border); margin-left: 12px; padding-left: 12px; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+                                <i class="fa-solid fa-file-export"></i>
+                                <span>Export</span>
+                            </button>
+                        </div>
+
+                        <button class="btn primary" type="button" style="display: flex; align-items: center; gap: 8px;">
                             <i class="fa-solid fa-rotate"></i>
-                            Retrain Model
+                            <span>Retrain Model</span>
                         </button>
                     </div>
                 </div>
