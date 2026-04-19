@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\IPS_PROJECT",
+    "\\IPS_PROJECT\\Controllers",
+    "\\IPS_PROJECT\\Services",
+    "\\IPS_PROJECT\\Views",
+    "\\IPS_PROJECT\\Views\\Dashboard",
+    "\\IPS_PROJECT\\Views\\Home",
+    "\\IPS_PROJECT\\wwwroot",
+    "\\IPS_PROJECT\\wwwroot\\css",
+    "\\IPS_PROJECT\\wwwroot\\js"
+  ],
+  "SelectedNode": "\\IPS_PROJECT\\Controllers\\Account.cs",
+  "PreviewInSolutionExplorer": false
+}
