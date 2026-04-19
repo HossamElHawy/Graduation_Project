@@ -22,15 +22,18 @@ namespace IPS_PROJECT.Controllers
         private readonly SignInManager<USERS> _signInManager;
         private readonly UserManager<USERS> _userManager;
         private readonly IEmailSender _emailSender;
+        private readonly AppDbContext _context;
 
-        public Account(UserManager<USERS> userManager, SignInManager<USERS> signInManager, IEmailSender emailSender)
+        public Account(UserManager<USERS> userManager, SignInManager<USERS> signInManager, IEmailSender emailSender, AppDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
+            _context = context;
         }
 
         // GET: /Account/Login
+
         [HttpGet]
         [AllowAnonymous]
         public IActionResult Login()
@@ -38,7 +41,10 @@ namespace IPS_PROJECT.Controllers
             return View();
         }
 
+
+
         // POST: /Account/Login
+
         [HttpPost]
         [AllowAnonymous]
         public async Task<IActionResult> Login(LoginViewModel model)
@@ -100,8 +106,10 @@ namespace IPS_PROJECT.Controllers
 
 
 
-        // GET: /Account/Register
 
+        
+       //////////////////////////////// GET: /Account/Register  //////////////////////////////////////////////
+       
         [HttpGet]
         [AllowAnonymous]
         public IActionResult Register()
@@ -110,7 +118,8 @@ namespace IPS_PROJECT.Controllers
         }
 
 
-        // POST: /Account/Register
+        //////////////////////////////  POST: /Account/Register   /////////////////////////////////////////////////
+        
 
         [HttpPost]
         [AllowAnonymous]
@@ -127,34 +136,20 @@ namespace IPS_PROJECT.Controllers
 
             var user = new USERS
             {
-                UserName = model.Email,
+                UserName = model.FullName,
                 Email = model.Email,
-                FullName = model.FullName
+                FullName = model.FullName,
+                RequestedRole = model.RegisterType
             };
 
-            var result = await _userManager.CreateAsync(user, model.Password);
 
-            if (result.Succeeded)
-            {
-                var usersCount = await _userManager.Users.CountAsync();
+             var result = await _userManager.CreateAsync(user, model.Password);
 
-                if (usersCount == 1)
-                {
-                    // أول يوزر يبقى Admin
-                    await _userManager.AddToRoleAsync(user, "Admin");
-                }
-                else
-                {
-                    // باقي اليوزرات يبقوا Users
-                    await _userManager.AddToRoleAsync(user, "User");
-                }
-
-
-                // إرسال إيميل التفعيل
-                await SendConfirmationEmail(user);
-
-                return RedirectToAction("VerifyEmail");
-            }
+                      if (result.Succeeded)
+                               {
+                                            await SendConfirmationEmail(user);
+                                            return RedirectToAction("VerifyEmail");
+                                }
 
             foreach (var error in result.Errors)
             {
@@ -165,8 +160,12 @@ namespace IPS_PROJECT.Controllers
         }
 
 
+
+        ////////////////////////////////  Send_Confirmation_Email  //////////////////////////////////////////////
+        
         private async Task SendConfirmationEmail(USERS user)
         {
+           
             var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
 
@@ -193,6 +192,9 @@ namespace IPS_PROJECT.Controllers
                 $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
         }
 
+
+        //////////////////////////////// Confirm_Email  //////////////////////////////////////////////
+
         // صفحة استقبال التفعيل (مسموحة للجميع)
         [HttpGet]
         [AllowAnonymous]
@@ -210,10 +212,46 @@ namespace IPS_PROJECT.Controllers
 
             if (result.Succeeded)
             {
-                // تسجيل الدخول تلقائياً
-                await _signInManager.SignInAsync(user, isPersistent: false);
+                var adminExists = await (
+                from u in _context.Users
+                join ur in _context.UserRoles on u.Id equals ur.UserId
+                join r in _context.Roles on ur.RoleId equals r.Id
+                where r.Name == "Admin"
+                select u
+                ).AnyAsync();
 
-                // تحويل حسب الدور
+                if (!adminExists && user.RequestedRole == "Admin")
+                {
+                    // أول Admin في النظام
+                    await _userManager.AddToRoleAsync(user, "Admin");
+                }
+
+                else if (user.RequestedRole == "Admin")
+                {
+                    // إرسال طلب للأدمن
+                    await _userManager.AddToRoleAsync(user, "User");
+
+                    var request = new AdminRequest
+                    {
+                        UserId = user.Id,
+                        RequestDate = DateTime.Now,
+                        Status = "Pending"
+                    };
+
+                    _context.AdminRequests.Add(request);
+                    await _context.SaveChangesAsync();
+
+                    await SendAdminRequestEmail(user);
+
+                    return RedirectToAction("AdminRequestPending");
+                }
+                else
+                {
+                    await _userManager.AddToRoleAsync(user, "User");
+                }
+
+                await _signInManager.SignInAsync(user, false);
+
                 if (await _userManager.IsInRoleAsync(user, "Admin"))
                     return RedirectToAction("Index", "DashBoard");
                 else
@@ -224,8 +262,16 @@ namespace IPS_PROJECT.Controllers
         }
 
 
+        //////////////////////////////// AdminRequestPending  //////////////////////////////////////////////
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult AdminRequestPending()
+        {
+            return View();
+        }
 
-        // verify email / get
+
+        //////////////////////////////// Verify_Email  //////////////////////////////////////////////
 
         [HttpGet]
         [AllowAnonymous]
@@ -235,7 +281,7 @@ namespace IPS_PROJECT.Controllers
         }
 
 
-        // resend verification 
+        //////////////////////////////// Resend_Confirmation_Email  ////////////////////////////////////////////// 
 
         [HttpPost]
         [Authorize]
@@ -256,7 +302,181 @@ namespace IPS_PROJECT.Controllers
             return RedirectToAction("VerifyEmail");
         }
 
+        //ADMIN REQUEST
 
+        //////////////////////////////// SendAdminRequestEmail  //////////////////////////////////////////////
+        private async Task SendAdminRequestEmail(USERS user)
+        {
+            // 1️⃣ الحصول على أول Admin حسب تاريخ التسجيل
+            var firstAdmin = await (
+                from u in _context.Users
+                join ur in _context.UserRoles on u.Id equals ur.UserId
+                join r in _context.Roles on ur.RoleId equals r.Id
+                where r.Name == "Admin"
+                orderby u.CreatedAt
+                select u
+            ).FirstOrDefaultAsync();
+
+            if (firstAdmin == null)
+                return;
+
+            // 2️⃣ إنشاء Token آمن
+            var token = await _userManager.GenerateUserTokenAsync(
+                user,
+                "Default",
+                "AdminApproval"
+            );
+
+            token = WebEncoders.Base64UrlEncode(
+                Encoding.UTF8.GetBytes(token)
+            );
+
+            // 3️⃣ إنشاء رابط الموافقة
+            var approveLink = Url.Action(
+                 "ApproveAdmin",
+                 "Account",
+                 new { userId = user.Id, token = token },
+                 protocol: Request.Scheme);
+
+            var rejectLink = Url.Action(
+                "RejectAdmin",
+                "Account",
+                new { userId = user.Id },
+                protocol: Request.Scheme);
+
+            // 4️⃣ محتوى الإيميل
+            var message = $@"
+                   Hello {firstAdmin.FullName},<br><br>
+
+                   User <b>{user.FullName}</b> requested Admin access.<br><br>
+
+                   <a href='{approveLink}' 
+                     style='padding:10px;background:green;color:white;text-decoration:none'>
+                     Approve
+                     </a>
+
+                     &nbsp;
+
+                     <a href='{rejectLink}' 
+                     style='padding:10px;background:red;color:white;text-decoration:none'>
+                     Reject
+                     </a>
+                     ";
+
+            // 5️⃣ إرسال الإيميل
+            await _emailSender.SendEmailAsync(
+                firstAdmin.Email,
+                "Admin Access Request",
+                message
+            );
+        }
+
+
+
+
+
+        //////////////////////////////// Approve_Admin  //////////////////////////////////////////////
+
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> ApproveAdmin(string userId, string token)
+        {
+            if (userId == null || token == null)
+                return BadRequest();
+
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if (user == null)
+                return NotFound();
+
+            token = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(token));
+
+            var isValid = await _userManager.VerifyUserTokenAsync(
+                user,
+                "Default",
+                "AdminApproval",
+                token
+            );
+
+            if (!isValid)
+                return Unauthorized();
+
+            // إضافة رول Admin مرة واحدة فقط
+            if (!await _userManager.IsInRoleAsync(user, "Admin"))
+            {
+                await _userManager.AddToRoleAsync(user, "Admin");
+            }
+
+            var request = await _context.AdminRequests
+                .FirstOrDefaultAsync(r => r.UserId == userId && r.Status == "Pending");
+
+            if (request != null)
+            {
+                request.Status = "Approved";
+                await _context.SaveChangesAsync();
+            }
+
+            var loginUrl = Url.Action("Login", "Account", null, Request.Scheme);
+
+            // ✉️ Email مباشرة عبر service
+            var subject = "Admin Request Approved";
+            var message = $@"
+        Hello {user.FullName},<br><br>
+
+        Your request for Admin access has been <b style='color:green'>approved</b>.<br><br>
+
+        You can now log in as Admin from the login page.<br><br>
+
+        <a href='{loginUrl}'>Go to Login</a>
+    ";
+
+            await _emailSender.SendEmailAsync(user.Email, subject, message);
+
+            return Content("Admin access granted successfully.");
+        }
+
+
+        //////////////////////////////// Reject_Admin  ////////////////////////////////////////////// 
+
+
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> RejectAdmin(string userId)
+        {
+            if (userId == null)
+                return BadRequest();
+
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if (user == null)
+                return NotFound();
+
+            var request = await _context.AdminRequests
+                .FirstOrDefaultAsync(r => r.UserId == userId && r.Status == "Pending");
+
+            if (request != null)
+            {
+                request.Status = "Rejected";
+                await _context.SaveChangesAsync();
+            }
+
+            var loginUrl = Url.Action("Login", "Account", null, Request.Scheme);
+            // ✉️ Email مباشرة عبر service
+            var subject = "Admin Request Rejected";
+            var message = $@"
+        Hello {user.FullName},<br><br>
+
+        Your request for Admin access has been <b style='color:red'>rejected</b>.<br><br>
+
+        You can continue using the system as a normal user.
+
+        <a href='{loginUrl}'>Go to Login</a>
+    ";
+
+            await _emailSender.SendEmailAsync(user.Email, subject, message);
+
+            return Content("Admin request rejected.");
+        }
 
     }
 }

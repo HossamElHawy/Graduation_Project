@@ -1,162 +1,220 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\",
+  "WorkspaceRootPath": "E:\\IPS_REPO\\IPS_PROJECT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Dashboard\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Dashboard\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\ReportsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\ReportsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\wwwroot\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:wwwroot\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Services\\PdfReportService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\PdfReportService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\models\\viewmodels\\recenteventssearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:models\\viewmodels\\recenteventssearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\TrafficController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\TrafficController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\controllers\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:controllers\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Services\\AiPredictionService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\AiPredictionService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\TrafficIncomingRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\TrafficIncomingRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\UserDashboardController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\UserDashboardController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ViewModels\\UserDashboardViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\ViewModels\\UserDashboardViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\UserDashboard\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\UserDashboard\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\areas\\identity\\pages\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:areas\\identity\\pages\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Hubs\\SecurityHub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Hubs\\SecurityHub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\models\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:models\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\SYSTEM_STATUS.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\SYSTEM_STATUS.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Data\\AppDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\AppDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\models\\events.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:models\\events.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\DashBoardController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\DashBoardController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\views\\account\\adminrequestpending.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:views\\account\\adminrequestpending.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\UserDashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\UserDashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Hubs\\IpsHub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Hubs\\IpsHub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\models\\system_status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:models\\system_status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ViewModels\\RegisterViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\ViewModels\\RegisterViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\views\\account\\verifyemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:views\\account\\verifyemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ViewModels\\DashboardViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\ViewModels\\DashboardViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\models\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:models\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\USERS.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\USERS.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\models\\adminrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:models\\adminrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\views\\dashboard\\adminrequests.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:views\\dashboard\\adminrequests.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Account\\ConfirmEmail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Account\\ConfirmEmail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\areas\\identity\\pages\\account\\resetpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:areas\\identity\\pages\\account\\resetpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\areas\\identity\\pages\\account\\forgotpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:areas\\identity\\pages\\account\\forgotpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Services\\EmailSender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\EmailSender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\areas\\identity\\pages\\account\\forgotpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:areas\\identity\\pages\\account\\forgotpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Account\\VerifyEmail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Account\\VerifyEmail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\areas\\identity\\pages\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:areas\\identity\\pages\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\Account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\Account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\migrations\\20260301092511_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:migrations\\20260301092511_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Account\\Login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Account\\Login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\IPS_REPO\\IPS_PROJECT\\Migrations\\20260301091648_addNotificationsTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260301091648_addNotificationsTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\EVENTS.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\EVENTS.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\services\\databasemonitoringservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:services\\databasemonitoringservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Shared\\_Layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Shared\\_Layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Account\\Register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Account\\Register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\wwwroot\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:wwwroot\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\areas\\identity\\pages\\account\\forgotpasswordconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:areas\\identity\\pages\\account\\forgotpasswordconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\THREATS.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\THREATS.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\controllers\\trafficcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:controllers\\trafficcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ErrorViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\ErrorViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Migrations\\20260130234724_addData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ALERTS.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\ALERTS.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Migrations\\20260130074610_createtables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ViewModels\\ProfileViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\ViewModels\\ProfileViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Services\\DatabaseMonitoringService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\DatabaseMonitoringService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\services\\pdfreportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:services\\pdfreportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Home\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Home\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\views\\userdashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:views\\userdashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Migrations\\20260130234724_addData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260130234724_addData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\models\\trafficincomingrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:models\\trafficincomingrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Migrations\\20260130074610_createtables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260130074610_createtables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\services\\aipredictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:services\\aipredictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\models\\viewmodels\\userdashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:models\\viewmodels\\userdashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\controllers\\userdashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:controllers\\userdashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\hubs\\securityhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:hubs\\securityhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\models\\userdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:models\\userdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\hubs\\ipshub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:hubs\\ipshub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\views\\account\\confirmemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:views\\account\\confirmemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\models\\threats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:models\\threats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\models\\alerts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:models\\alerts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\models\\viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:models\\viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\migrations\\20260314010931_requestedroleandadmincreated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:migrations\\20260314010931_requestedroleandadmincreated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|e:\\ips_repo\\ips_project\\migrations\\20260316002914_addadminrequeststable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CB2E8B1-9639-E24E-A5F0-3723956742CB}|IPS_PROJECT.csproj|solutionrelative:migrations\\20260316002914_addadminrequeststable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -166,332 +224,166 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReportsController.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\ReportsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReportsController.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\ReportsController.cs",
-              "RelativeToolTip": "Controllers\\ReportsController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAIwDAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T19:28:14.838Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PdfReportService.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Services\\PdfReportService.cs",
-              "RelativeDocumentMoniker": "Services\\PdfReportService.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Services\\PdfReportService.cs",
-              "RelativeToolTip": "Services\\PdfReportService.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAQwGYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T19:23:40.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\UserDashboard\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\UserDashboard\\Index.cshtml",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\UserDashboard\\Index.cshtml",
-              "RelativeToolTip": "Views\\UserDashboard\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-15T07:37:19.136Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Dashboard\\Index.cshtml",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Dashboard\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Dashboard\\Index.cshtml",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Dashboard\\Index.cshtml",
               "RelativeToolTip": "Views\\Dashboard\\Index.cshtml",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAAAGIAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-02-15T10:04:45.73Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
+              "Title": "style.css",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\style.css",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "wwwroot\\css\\style.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-15T05:18:10.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Account.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Controllers\\Account.cs",
+              "RelativeDocumentMoniker": "Controllers\\Account.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Controllers\\Account.cs",
+              "RelativeToolTip": "Controllers\\Account.cs",
+              "ViewState": "AgIAAKMBAAAAAAAAAAAQwEoBAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-13T20:53:07.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dashboard.css",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\wwwroot\\css\\dashboard.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\dashboard.css",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\wwwroot\\css\\dashboard.css",
+              "RelativeToolTip": "wwwroot\\css\\dashboard.css",
+              "ViewState": "AgIAAHcDAAAAAAAAAAAgwIsDAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-13T20:18:36.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Program.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Program.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGsAAACVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-15T10:10:04.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TrafficIncomingRequest.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\TrafficIncomingRequest.cs",
-              "RelativeDocumentMoniker": "Models\\TrafficIncomingRequest.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\TrafficIncomingRequest.cs",
-              "RelativeToolTip": "Models\\TrafficIncomingRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "RecentEventsSearch.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\ViewModels\\RecentEventsSearch.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\RecentEventsSearch.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\ViewModels\\RecentEventsSearch.cs",
+              "RelativeToolTip": "Models\\ViewModels\\RecentEventsSearch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T01:06:50.693Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TrafficController.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\TrafficController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TrafficController.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\TrafficController.cs",
-              "RelativeToolTip": "Controllers\\TrafficController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAFUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T15:52:02.291Z",
+              "WhenOpened": "2026-04-15T23:31:45.963Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AiPredictionService.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Services\\AiPredictionService.cs",
-              "RelativeDocumentMoniker": "Services\\AiPredictionService.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Services\\AiPredictionService.cs",
-              "RelativeToolTip": "Services\\AiPredictionService.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "DashBoardController.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Controllers\\DashBoardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DashBoardController.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Controllers\\DashBoardController.cs",
+              "RelativeToolTip": "Controllers\\DashBoardController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAIwHkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T15:46:15.611Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserDashboardViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ViewModels\\UserDashboardViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ViewModels\\UserDashboardViewModel.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ViewModels\\UserDashboardViewModel.cs",
-              "RelativeToolTip": "Models\\ViewModels\\UserDashboardViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T07:38:53.522Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserDashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\UserDashboardController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserDashboardController.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\UserDashboardController.cs",
-              "RelativeToolTip": "Controllers\\UserDashboardController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T10:34:24.898Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SecurityHub.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Hubs\\SecurityHub.cs",
-              "RelativeDocumentMoniker": "Hubs\\SecurityHub.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Hubs\\SecurityHub.cs",
-              "RelativeToolTip": "Hubs\\SecurityHub.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T10:21:27.114Z"
+              "WhenOpened": "2026-01-30T10:10:54.148Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "SYSTEM_STATUS.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\SYSTEM_STATUS.cs",
-              "RelativeDocumentMoniker": "Models\\SYSTEM_STATUS.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\SYSTEM_STATUS.cs",
-              "RelativeToolTip": "Models\\SYSTEM_STATUS.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T10:35:20.901Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Data\\AppDbContext.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Data\\AppDbContext.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Data\\AppDbContext.cs",
               "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-05T20:17:34.255Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DashBoardController.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\DashBoardController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DashBoardController.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\DashBoardController.cs",
-              "RelativeToolTip": "Controllers\\DashBoardController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T10:10:54.148Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UserDashboard.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\UserDashboard.cs",
-              "RelativeDocumentMoniker": "Models\\UserDashboard.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\UserDashboard.cs",
-              "RelativeToolTip": "Models\\UserDashboard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T07:43:28.93Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IpsHub.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Hubs\\IpsHub.cs",
-              "RelativeDocumentMoniker": "Hubs\\IpsHub.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Hubs\\IpsHub.cs",
-              "RelativeToolTip": "Hubs\\IpsHub.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T19:06:50.757Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ViewModels\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ViewModels\\RegisterViewModel.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ViewModels\\RegisterViewModel.cs",
-              "RelativeToolTip": "Models\\ViewModels\\RegisterViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-15T07:56:20.585Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "DashboardViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ViewModels\\DashboardViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ViewModels\\DashboardViewModel.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ViewModels\\DashboardViewModel.cs",
-              "RelativeToolTip": "Models\\ViewModels\\DashboardViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T10:14:24.594Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "USERS.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\USERS.cs",
-              "RelativeDocumentMoniker": "Models\\USERS.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\USERS.cs",
-              "RelativeToolTip": "Models\\USERS.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T07:14:40.413Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-11T06:16:54.531Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ConfirmEmail.cshtml",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Account\\ConfirmEmail.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\ConfirmEmail.cshtml",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Account\\ConfirmEmail.cshtml",
-              "RelativeToolTip": "Views\\Account\\ConfirmEmail.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAEkAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-12T04:29:06.762Z"
+              "WhenOpened": "2026-01-30T22:35:56.467Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\wwwroot\\css\\style.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\style.css",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\wwwroot\\css\\style.css",
-              "RelativeToolTip": "wwwroot\\css\\style.css",
-              "ViewState": "AgIAAO8BAAAAAAAAAAAAACICAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-02-15T05:18:10.259Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "EmailSender.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Services\\EmailSender.cs",
-              "RelativeDocumentMoniker": "Services\\EmailSender.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Services\\EmailSender.cs",
-              "RelativeToolTip": "Services\\EmailSender.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAACsAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T05:48:28.831Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "VerifyEmail.cshtml",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Account\\VerifyEmail.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\VerifyEmail.cshtml",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Account\\VerifyEmail.cshtml",
-              "RelativeToolTip": "Views\\Account\\VerifyEmail.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-12T04:04:19.937Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Account.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\Account.cs",
-              "RelativeDocumentMoniker": "Controllers\\Account.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\Account.cs",
-              "RelativeToolTip": "Controllers\\Account.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAQwGUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T20:53:07.233Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 8,
               "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Account\\Login.cshtml",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Account\\Login.cshtml",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Account\\Login.cshtml",
               "RelativeToolTip": "Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAFsAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-02-14T19:50:30.563Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 9,
+              "Title": "ForgotPassword.cshtml",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAEUAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-27T20:53:48.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\ViewModels\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\DashboardViewModel.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\ViewModels\\DashboardViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\DashboardViewModel.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T10:14:24.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "EVENTS.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\EVENTS.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\EVENTS.cs",
               "RelativeDocumentMoniker": "Models\\EVENTS.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\EVENTS.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\EVENTS.cs",
               "RelativeToolTip": "Models\\EVENTS.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -499,11 +391,239 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "VerifyEmail.cshtml",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Account\\VerifyEmail.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\VerifyEmail.cshtml",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Account\\VerifyEmail.cshtml",
+              "RelativeToolTip": "Views\\Account\\VerifyEmail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-12T04:04:19.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T07:56:20.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SYSTEM_STATUS.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\SYSTEM_STATUS.cs",
+              "RelativeDocumentMoniker": "Models\\SYSTEM_STATUS.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\SYSTEM_STATUS.cs",
+              "RelativeToolTip": "Models\\SYSTEM_STATUS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T10:35:20.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AdminRequestPending.cshtml",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Account\\AdminRequestPending.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\AdminRequestPending.cshtml",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Account\\AdminRequestPending.cshtml",
+              "RelativeToolTip": "Views\\Account\\AdminRequestPending.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-15T21:29:08.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "USERS.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\USERS.cs",
+              "RelativeDocumentMoniker": "Models\\USERS.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\USERS.cs",
+              "RelativeToolTip": "Models\\USERS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T07:14:40.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AdminRequest.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\AdminRequest.cs",
+              "RelativeDocumentMoniker": "Models\\AdminRequest.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\AdminRequest.cs",
+              "RelativeToolTip": "Models\\AdminRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T00:26:13.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AdminRequests.cshtml",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Dashboard\\AdminRequests.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dashboard\\AdminRequests.cshtml",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Dashboard\\AdminRequests.cshtml",
+              "RelativeToolTip": "Views\\Dashboard\\AdminRequests.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T00:44:08.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "20260316002914_AddAdminRequestsTable.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Migrations\\20260316002914_AddAdminRequestsTable.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260316002914_AddAdminRequestsTable.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Migrations\\20260316002914_AddAdminRequestsTable.cs",
+              "RelativeToolTip": "Migrations\\20260316002914_AddAdminRequestsTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T00:29:18.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "20260314010931_RequestedRoleAndAdminCreated.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Migrations\\20260314010931_RequestedRoleAndAdminCreated.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260314010931_RequestedRoleAndAdminCreated.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Migrations\\20260314010931_RequestedRoleAndAdminCreated.cs",
+              "RelativeToolTip": "Migrations\\20260314010931_RequestedRoleAndAdminCreated.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T01:09:32.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ForgotPasswordConfirmation.cshtml",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-01T01:41:05.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ResetPasswordConfirmation.cshtml",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T20:46:25.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ForgotPassword.cshtml.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAIBQwDcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T01:38:58.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-11T06:16:54.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ResetPassword.cshtml",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-01T04:27:14.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "20260301091648_addNotificationsTable.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Migrations\\20260301091648_addNotificationsTable.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260301091648_addNotificationsTable.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Migrations\\20260301091648_addNotificationsTable.cs",
+              "RelativeToolTip": "Migrations\\20260301091648_addNotificationsTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T09:16:48.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "20260301092511_InitialCreate.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Migrations\\20260301092511_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260301092511_InitialCreate.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Migrations\\20260301092511_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20260301092511_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T09:25:11.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "ScaffoldingReadMe.txt",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "ScaffoldingReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-02-27T20:53:23.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "DatabaseMonitoringService.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Services\\DatabaseMonitoringService.cs",
+              "RelativeDocumentMoniker": "Services\\DatabaseMonitoringService.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Services\\DatabaseMonitoringService.cs",
+              "RelativeToolTip": "Services\\DatabaseMonitoringService.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAuwDMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T19:08:33.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ForgotPasswordConfirmation.cshtml.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T01:25:56.17Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 27,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -511,35 +631,167 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAFoAAAABAAAAAAAAAA==",
+              "DocumentIndex": 37,
+              "Title": "TrafficIncomingRequest.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\TrafficIncomingRequest.cs",
+              "RelativeDocumentMoniker": "Models\\TrafficIncomingRequest.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\TrafficIncomingRequest.cs",
+              "RelativeToolTip": "Models\\TrafficIncomingRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T01:06:50.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "TrafficController.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Controllers\\TrafficController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TrafficController.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Controllers\\TrafficController.cs",
+              "RelativeToolTip": "Controllers\\TrafficController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAFUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T15:52:02.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\UserDashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\UserDashboard\\Index.cshtml",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\UserDashboard\\Index.cshtml",
+              "RelativeToolTip": "Views\\UserDashboard\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-30T22:35:56.467Z"
+              "WhenOpened": "2026-02-15T07:37:19.136Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "dashboard.css",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\wwwroot\\css\\dashboard.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\dashboard.css",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\wwwroot\\css\\dashboard.css",
-              "RelativeToolTip": "wwwroot\\css\\dashboard.css",
-              "ViewState": "AgIAACMEAAAAAAAAAAAAADYEAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-02-13T20:18:36.907Z"
+              "DocumentIndex": 35,
+              "Title": "PdfReportService.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Services\\PdfReportService.cs",
+              "RelativeDocumentMoniker": "Services\\PdfReportService.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Services\\PdfReportService.cs",
+              "RelativeToolTip": "Services\\PdfReportService.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAQwGYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T19:23:40.156Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
+              "Title": "ReportsController.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Controllers\\ReportsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReportsController.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Controllers\\ReportsController.cs",
+              "RelativeToolTip": "Controllers\\ReportsController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAIwDAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T19:28:14.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "AiPredictionService.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Services\\AiPredictionService.cs",
+              "RelativeDocumentMoniker": "Services\\AiPredictionService.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Services\\AiPredictionService.cs",
+              "RelativeToolTip": "Services\\AiPredictionService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T15:46:15.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "UserDashboardViewModel.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\ViewModels\\UserDashboardViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\UserDashboardViewModel.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\ViewModels\\UserDashboardViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\UserDashboardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T07:38:53.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "UserDashboardController.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Controllers\\UserDashboardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserDashboardController.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Controllers\\UserDashboardController.cs",
+              "RelativeToolTip": "Controllers\\UserDashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T10:34:24.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "SecurityHub.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Hubs\\SecurityHub.cs",
+              "RelativeDocumentMoniker": "Hubs\\SecurityHub.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Hubs\\SecurityHub.cs",
+              "RelativeToolTip": "Hubs\\SecurityHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T10:21:27.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "UserDashboard.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\UserDashboard.cs",
+              "RelativeDocumentMoniker": "Models\\UserDashboard.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\UserDashboard.cs",
+              "RelativeToolTip": "Models\\UserDashboard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T07:43:28.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "IpsHub.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Hubs\\IpsHub.cs",
+              "RelativeDocumentMoniker": "Hubs\\IpsHub.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Hubs\\IpsHub.cs",
+              "RelativeToolTip": "Hubs\\IpsHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T19:06:50.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ConfirmEmail.cshtml",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Account\\ConfirmEmail.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\ConfirmEmail.cshtml",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Account\\ConfirmEmail.cshtml",
+              "RelativeToolTip": "Views\\Account\\ConfirmEmail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-12T04:29:06.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Services\\EmailSender.cs",
+              "RelativeDocumentMoniker": "Services\\EmailSender.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Services\\EmailSender.cs",
+              "RelativeToolTip": "Services\\EmailSender.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAACsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T05:48:28.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -547,11 +799,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 47,
               "Title": "THREATS.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\THREATS.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\THREATS.cs",
               "RelativeDocumentMoniker": "Models\\THREATS.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\THREATS.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\THREATS.cs",
               "RelativeToolTip": "Models\\THREATS.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -559,11 +811,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 48,
               "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ErrorViewModel.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ErrorViewModel.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\ErrorViewModel.cs",
               "RelativeToolTip": "Models\\ErrorViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -571,11 +823,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 49,
               "Title": "ALERTS.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ALERTS.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\ALERTS.cs",
               "RelativeDocumentMoniker": "Models\\ALERTS.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ALERTS.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\ALERTS.cs",
               "RelativeToolTip": "Models\\ALERTS.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -583,11 +835,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 50,
               "Title": "ProfileViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ViewModels\\ProfileViewModel.cs",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\ViewModels\\ProfileViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ViewModels\\ProfileViewModel.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Models\\ViewModels\\ProfileViewModel.cs",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Models\\ViewModels\\ProfileViewModel.cs",
               "RelativeToolTip": "Models\\ViewModels\\ProfileViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -595,23 +847,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "DatabaseMonitoringService.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Services\\DatabaseMonitoringService.cs",
-              "RelativeDocumentMoniker": "Services\\DatabaseMonitoringService.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Services\\DatabaseMonitoringService.cs",
-              "RelativeToolTip": "Services\\DatabaseMonitoringService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T19:08:33.589Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 51,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\IPS_REPO\\IPS_PROJECT\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -619,24 +859,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 32,
               "Title": "20260130234724_addData.cs",
               "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Migrations\\20260130234724_addData.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260130234724_addData.cs",
               "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Migrations\\20260130234724_addData.cs",
-              "RelativeToolTip": "Migrations\\20260130234724_addData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-30T23:47:25.296Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 33,
               "Title": "20260130074610_createtables.cs",
               "DocumentMoniker": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Migrations\\20260130074610_createtables.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260130074610_createtables.cs",
               "ToolTip": "C:\\Users\\dell\\Desktop\\IPS_AI_BG_SERVICE\\IPS_PROJECT\\Migrations\\20260130074610_createtables.cs",
-              "RelativeToolTip": "Migrations\\20260130074610_createtables.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-30T07:46:10.549Z"

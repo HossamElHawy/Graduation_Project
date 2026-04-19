@@ -60,5 +60,79 @@ namespace IPS_PROJECT.Controllers
 
             return View(viewModel);
         }
+
+
+
+        /// //////////////////////////////////// SEARCH FILTERS //////////////////////////////////////
+
+
+        public async Task<IActionResult> Search(RecentEventsSearch search)
+        {
+            var query = _context.Events.AsQueryable();
+
+            // 🔍 Smart Search (IP + Attack Type + Status)
+            if (!string.IsNullOrEmpty(search.Term))
+            {
+                var term = search.Term.ToLower();
+
+                query = query.Where(x =>
+                    x.SourceIp.ToLower().Contains(term) ||
+                    x.TrafficType.ToLower().Contains(term) ||
+                    x.Status.ToLower().Contains(term)
+                );
+            }
+
+            // ⏱ Time Filter
+            if (!string.IsNullOrEmpty(search.TimeRange))
+            {
+                var now = DateTime.UtcNow;
+
+                switch (search.TimeRange)
+                {
+                    case "24h":
+                        query = query.Where(x => x.Timestamp >= now.AddHours(-24));
+                        break;
+
+                    case "7d":
+                        query = query.Where(x => x.Timestamp >= now.AddDays(-7));
+                        break;
+
+                    case "30d":
+                        query = query.Where(x => x.Timestamp >= now.AddDays(-30));
+                        break;
+                }
+            }
+
+            var model = new DashboardViewModel
+            {
+                RecentEvents = await query
+                    .OrderByDescending(x => x.Timestamp)
+                    .ToListAsync(),
+
+                TotalEvents = await _context.Events.CountAsync(),
+                ThreatsBlocked = await _context.Events.CountAsync(x => x.Status == "Blocked"),
+                BenignTraffic = await _context.Events.CountAsync(x => x.Status == "Allowed"),
+                AlertNotifications = await _context.AlertNotifications.ToListAsync()
+            };
+
+            return View("Index", model); // 👈 مهم
+        }
+
+        
+        
+
+
+
+
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> AdminRequests()
+        {
+            var requests = await _context.AdminRequests
+                .Include(r => r.User)
+                .Where(r => r.Status == "Pending")
+                .ToListAsync();
+
+            return View(requests);
+        }
     }
 }

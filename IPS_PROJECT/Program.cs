@@ -1,4 +1,4 @@
-﻿using IPS_PROJECT.Data;
+using IPS_PROJECT.Data;
 using IPS_PROJECT.Hubs;
 using IPS_PROJECT.Models;
 using IPS_PROJECT.Services;
@@ -14,17 +14,23 @@ var builder = WebApplication.CreateBuilder(args);
 
 // 1️⃣ Add services
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
 // 2️⃣ DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
-// 3️⃣ Identity
-builder.Services.AddIdentity<USERS, IdentityRole>()
-    .AddEntityFrameworkStores<AppDbContext>()
-    .AddDefaultTokenProviders();
 
+
+// 3️⃣ Identity
+builder.Services.AddIdentity<USERS, IdentityRole>(options =>
+{
+    options.SignIn.RequireConfirmedEmail = true;
+    options.User.RequireUniqueEmail = true;
+})
+.AddEntityFrameworkStores<AppDbContext>()
+.AddDefaultTokenProviders();
 //Ai predection services
 // إضافة هذه السطور قبل builder.Build()
 builder.Services.AddHttpClient<AiPredictionService>();
@@ -34,10 +40,7 @@ builder.Services.AddScoped<AiPredictionService>();
 builder.Services.AddSignalR();
 builder.Services.AddHostedService<DatabaseMonitoringService>();
 
-builder.Services.Configure<IdentityOptions>(options =>
-{
-    options.SignIn.RequireConfirmedEmail = true;
-});
+ 
 
 //For Pdf Downloading
 
@@ -61,6 +64,8 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+
 
 app.MapControllerRoute(
     name: "default",
@@ -93,16 +98,16 @@ using (var scope = app.Services.CreateScope())
     {
         db.Events.AddRange(new EVENTS[]
         {
-            new EVENTS { SourceIp="192.168.1.10", DestinationIp="10.0.0.5", TrafficType="HTTP", Prediction="Benign", Confidence=95, Status="Normal" },
-            new EVENTS { SourceIp="192.168.1.12", DestinationIp="10.0.0.7", TrafficType="SSH", Prediction="Attack", Confidence=85, Status="Suspicious" },
-            new EVENTS { SourceIp="192.168.1.15", DestinationIp="10.0.0.8", TrafficType="FTP", Prediction="Attack", Confidence=90, Status="Suspicious" },
-            new EVENTS { SourceIp="192.168.1.20", DestinationIp="10.0.0.9", TrafficType="HTTP", Prediction="Benign", Confidence=99, Status="Normal" },
-            new EVENTS { SourceIp="192.168.1.25", DestinationIp="10.0.0.10", TrafficType="HTTPS", Prediction="Benign", Confidence=97, Status="Normal" },
-            new EVENTS { SourceIp="192.168.1.30", DestinationIp="10.0.0.11", TrafficType="SMTP", Prediction="Attack", Confidence=80, Status="Suspicious" },
-            new EVENTS { SourceIp="192.168.1.35", DestinationIp="10.0.0.12", TrafficType="SSH", Prediction="Attack", Confidence=88, Status="Suspicious" },
-            new EVENTS { SourceIp="192.168.1.40", DestinationIp="10.0.0.13", TrafficType="HTTP", Prediction="Benign", Confidence=96, Status="Normal" },
-            new EVENTS { SourceIp="192.168.1.45", DestinationIp="10.0.0.14", TrafficType="FTP", Prediction="Attack", Confidence=85, Status="Suspicious" },
-            new EVENTS { SourceIp="192.168.1.50", DestinationIp="10.0.0.15", TrafficType="SMTP", Prediction="Attack", Confidence=82, Status="Suspicious" }
+            new EVENTS { SourceIp="192.168.1.10", DestinationIp="10.0.0.5", TrafficType="HTTP", Prediction="Benign", Confidence=95, Status="Blocked" },
+            new EVENTS { SourceIp="192.168.1.12", DestinationIp="10.0.0.7", TrafficType="SSH", Prediction="Attack", Confidence=85, Status="Allowed" },
+            new EVENTS { SourceIp="192.168.1.15", DestinationIp="10.0.0.8", TrafficType="FTP", Prediction="Attack", Confidence=90, Status="Blocked" },
+            new EVENTS { SourceIp="192.168.1.20", DestinationIp="10.0.0.9", TrafficType="HTTP", Prediction="Benign", Confidence=99, Status="Allowed" },
+            new EVENTS { SourceIp="192.168.1.25", DestinationIp="10.0.0.10", TrafficType="HTTPS", Prediction="Benign", Confidence=97, Status="Detected" },
+            new EVENTS { SourceIp="192.168.1.30", DestinationIp="10.0.0.11", TrafficType="SMTP", Prediction="Attack", Confidence=80, Status="Blocked" },
+            new EVENTS { SourceIp="192.168.1.35", DestinationIp="10.0.0.12", TrafficType="SSH", Prediction="Attack", Confidence=88, Status="Allowed" },
+            new EVENTS { SourceIp="192.168.1.40", DestinationIp="10.0.0.13", TrafficType="HTTP", Prediction="Benign", Confidence=96, Status="Detected" },
+            new EVENTS { SourceIp="192.168.1.45", DestinationIp="10.0.0.14", TrafficType="FTP", Prediction="Attack", Confidence=85, Status="Blocked" },
+            new EVENTS { SourceIp="192.168.1.50", DestinationIp="10.0.0.15", TrafficType="SMTP", Prediction="Attack", Confidence=82, Status="Blocked" }
         });
         db.SaveChanges();
     }
@@ -145,7 +150,8 @@ using (var scope = app.Services.CreateScope())
         context.SystemStatus.Add(new SYSTEM_STATUS
         {
             IsSecure = true,
-            LastUpdated = DateTime.Now
+            LastUpdated = DateTime.Now,
+        //    FirstAdminCreated = false
         });
 
         context.SaveChanges();
@@ -153,6 +159,6 @@ using (var scope = app.Services.CreateScope())
 }
 
 
-
+app.MapRazorPages();
 
 app.Run();

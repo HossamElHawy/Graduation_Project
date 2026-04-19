@@ -156,12 +156,30 @@
                 <!-- Table -->
                 <section class="card table-card" aria-label="Recent detection events">
                     <div class="table-head">
+
                         <div class="table-title">Recent Detection Events</div>
-                        <div class="table-filter">
-                            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                            <input id="tableFilter" type="text" placeholder="Filter by IP..." aria-label="Filter by IP" />
+
+                        <div class="filters-container">
+
+                            <!-- Search -->
+                            <form method="get" asp-action="Search" asp-controller="Dashboard" class="search-box">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input name="Term" type="text" placeholder="Search by IP, Attack Type, or Status..." />
+                            </form>
+
+                            <!-- Time Filter -->
+                            <form method="get" asp-action="Search" asp-controller="Dashboard" class="time-filter">
+                                <select name="TimeRange" onchange="this.form.submit()">
+                                    <option value="">All Time</option>
+                                    <option value="24h">Last 24 Hours</option>
+                                    <option value="7d">Last 7 Days</option>
+                                    <option value="30d">Last 30 Days</option>
+                                </select>
+                            </form>
+
                         </div>
                     </div>
+                   
 
                     <div style="overflow:auto;">
                         <table>
@@ -214,6 +232,14 @@
                     </div>
                 </section>
             </div>
+            <div>
+                <p class="signup-text">
+        
+                    <a asp-action="AdminRequests" asp-controller="DashboardController">Admin Requests</a>
+
+                </p>
+            </div>
+
 
             <!-- Footer -->
             <footer class="footer">
@@ -227,7 +253,5 @@
         </main>
     </div>
 
-
-
-
+ 
 </body>

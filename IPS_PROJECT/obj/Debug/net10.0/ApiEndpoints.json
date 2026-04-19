@@ -1,5 +1,67 @@
 [
   {
+    "ContainingType": "IPS_PROJECT.Controllers.ReportsController",
+    "Method": "DownloadLogsPdf",
+    "RelativePath": "api/Reports/DownloadLogsPdf",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IPS_PROJECT.Controllers.TrafficController",
+    "Method": "ClearAll",
+    "RelativePath": "api/Traffic/ClearAllNotifications",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IPS_PROJECT.Controllers.TrafficController",
+    "Method": "Delete",
+    "RelativePath": "api/Traffic/DeleteNotification/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IPS_PROJECT.Controllers.TrafficController",
+    "Method": "GetDetails",
+    "RelativePath": "api/Traffic/GetNotificationDetails/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IPS_PROJECT.Controllers.TrafficController",
+    "Method": "MarkAsRead",
+    "RelativePath": "api/Traffic/MarkAsRead",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "IPS_PROJECT.Controllers.TrafficController",
     "Method": "ProcessTraffic",
     "RelativePath": "api/Traffic/ProcessTraffic",
@@ -8,8 +70,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "rawData",
-        "Type": "System.Text.Json.JsonElement",
+        "Name": "incoming",
+        "Type": "IPS_PROJECT.Models.TrafficIncomingRequest",
         "IsRequired": true
       }
     ],

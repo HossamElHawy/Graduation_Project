@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IPS_PROJECT.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260223210304_InitialCreateAllTables")]
-    partial class InitialCreateAllTables
+    [Migration("20260301092511_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

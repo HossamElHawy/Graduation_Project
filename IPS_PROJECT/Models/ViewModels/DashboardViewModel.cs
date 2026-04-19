@@ -1,4 +1,5 @@
 ﻿using IPS_PROJECT.Models;
+using IPS_PROJECT.Models.ViewModels;
 using System.Collections.Generic;
 
 namespace IPS_PROJECT.ViewModels
@@ -6,10 +7,16 @@ namespace IPS_PROJECT.ViewModels
     public class DashboardViewModel
     {
         // Summary Cards
+
         public int TotalEvents { get; set; }
         public int ThreatsBlocked { get; set; }
         public int BenignTraffic { get; set; }
         public double ModelAccuracy { get; set; }
+
+        //Events search VM 
+
+        public RecentEventsSearch Search { get; set; }
+
 
         // System Configuration
         public bool AutoBlocking { get; set; }

@@ -857,9 +857,55 @@ tbody td {
         padding: 10px 0;
     }
 
-    .table-filter {
-        width: min(220px, 55vw);
+    /* container */
+    .filters-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        margin-top: 10px;
     }
+
+    /* SEARCH BOX */
+    .search-box {
+        position: relative;
+        flex: 1;
+        max-width: 400px;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px 12px 10px 35px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--panel-2);
+            color: var(--text);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--muted);
+        }
+
+    /* TIME FILTER */
+    .time-filter select {
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: var(--panel-2);
+        color: var(--text);
+        cursor: pointer;
+    }
+
+        /* Hover effect */
+        .search-box input:focus,
+        .time-filter select:focus {
+            outline: none;
+            border-color: #4a90e2;
+        }
 }
 
 .sys-banner {

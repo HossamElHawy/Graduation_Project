@@ -10,6 +10,8 @@ namespace IPS_PROJECT.Models
         public bool IsSecure { get; set; } = true;
 
         public DateTime LastUpdated { get; set; } = DateTime.Now;
+
+      //  public bool FirstAdminCreated { get; set; } = false;
     }
 }
  

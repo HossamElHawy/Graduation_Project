@@ -45,6 +45,32 @@ namespace IPS_PROJECT.Migrations
                     b.ToTable("Alerts");
                 });
 
+            modelBuilder.Entity("IPS_PROJECT.Models.AdminRequest", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("RequestDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AdminRequests");
+                });
+
             modelBuilder.Entity("IPS_PROJECT.Models.AlertNotification", b =>
                 {
                     b.Property<int>("Id")
@@ -138,6 +164,9 @@ namespace IPS_PROJECT.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("FirstAdminCreated")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("IsSecure")
                         .HasColumnType("bit");
 
@@ -221,6 +250,10 @@ namespace IPS_PROJECT.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("RequestedRole")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -387,6 +420,17 @@ namespace IPS_PROJECT.Migrations
                         .IsRequired();
 
                     b.Navigation("Threat");
+                });
+
+            modelBuilder.Entity("IPS_PROJECT.Models.AdminRequest", b =>
+                {
+                    b.HasOne("IPS_PROJECT.Models.USERS", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

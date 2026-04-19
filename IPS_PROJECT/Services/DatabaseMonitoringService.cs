@@ -47,7 +47,10 @@ public class DatabaseMonitoringService : BackgroundService
                 Console.WriteLine($"Error checking database: {ex.Message}");
             }
 
-            await Task.Delay(3000, stoppingToken);
+            while (!stoppingToken.IsCancellationRequested)
+            {
+                await Task.Delay(3000, stoppingToken);
+            }
         }
     }
 }

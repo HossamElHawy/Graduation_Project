@@ -17,6 +17,7 @@ namespace IPS_PROJECT.Data
         // AlertNotifications  table
         public DbSet<AlertNotification> AlertNotifications { get; set; } = null!;
 
+        public DbSet<AdminRequest> AdminRequests { get; set; }
 
 
 

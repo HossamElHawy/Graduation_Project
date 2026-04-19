@@ -7,8 +7,11 @@
 
 
 
-<form asp-action="Register" method="post">
+
 <div class="login-container">
+    <div class="card">
+
+    <form asp-action="Register" method="post">
 
     <!-- Header -->
     <div class="header">
@@ -20,9 +23,13 @@
     </div>
 
     <!-- Card -->
-    <div class="card">
+    
+
+        
         <h1>Create Account</h1>
 
+
+      
         <!-- Full Name -->
         <div class="input-group">
             <label>Full Name</label>
@@ -59,16 +66,35 @@
             </div>
         </div>
 
+        <!--register as admin or user-->
+
+                            <div class="input-group">
+                                <label>Register As</label>
+
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" asp-for="RegisterType" value="User" checked />
+                                        User
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" asp-for="RegisterType" value="Admin" />
+                                        Admin
+                                    </label>
+                                </div>
+                            </div>
+
         <!-- Sign Up Button -->
             <button type="submit" class="main-btn user-btn" id="signUpBtn">
             <span>Create Account</span>
             <i class="fas fa-user-plus"></i>
         </button>
+                       
+       
 
-        </div>
-    </div>
-
-    @Html.AntiForgeryToken()
+         
+         
+   
 
     <p class="signup-text">
 
@@ -76,14 +102,17 @@
 
     </p>
 
-</form>
+     </form>
+               
 
+         </div>
+
+         </div>
 
         <!-- Back to Login -->
        
 
- 
-
+  @Html.AntiForgeryToken()
 
 @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
 {
