@@ -1,0 +1,37 @@
+﻿## --- [ بيئة العمل والأداء ] ---
+# تجاهل مجلدات المخرجات (Build results)
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bin/
+obj/
+
+## --- [ ملفات المستخدم والإعدادات ] ---
+# تجاهل إعدادات Visual Studio الشخصية
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+## --- [ الحماية والبيانات السرية ] ---
+# تجاهل ملفات الإعدادات التي قد تحتوي على باسوردات أو Connection Strings
+# ملاحظة: إذا كنت تريد رفع appsettings.json كقالب، ارفعه مرة ثم أضفه هنا
+# appsettings.Development.json
+# usersecrets.json
+
+## --- [ الـ Frontend والمكتبات ] ---
+# إذا كان لديك مكتبات يتم تحميلها تلقائياً
+node_modules/
+.env
+.env.local
+
+## --- [ قاعدة البيانات المحلية ] ---
+# تجاهل ملفات SQL Server LocalDB المؤقتة
+*.mdf
+*.ldf
+*.log
+
+## --- [ ملفات التشغيل والأنظمة ] ---
+.DS_Store
+Thumbs.db
