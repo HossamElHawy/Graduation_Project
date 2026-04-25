@@ -31,9 +31,9 @@ namespace IPS_PROJECT.Controllers
             try
             {
                 if (incoming == null || incoming.data == null)
-                    return BadRequest(new { error = "بيانات غير مكتملة" });
+                    return BadRequest(new { error = "missing data" });
 
-                // 1. تنظيف البيانات وتحويلها لأرقام ليفهمها الموديل
+                
                 var cleanedData = new Dictionary<string, double>();
                 foreach (var item in incoming.data)
                 {
@@ -48,7 +48,7 @@ namespace IPS_PROJECT.Controllers
                 if (!cleanedData.ContainsKey("protocol"))
                     cleanedData["protocol"] = (double)incoming.protocol;
 
-                // 2. إرسال البيانات للموديل (FastAPI) والحصول على النتيجة
+               
                 var rawResult = await _aiService.GetRawPredictionAsync(cleanedData);
                 using var doc = JsonDocument.Parse(rawResult);
                 var root = doc.RootElement;
@@ -56,16 +56,14 @@ namespace IPS_PROJECT.Controllers
                 if (root.TryGetProperty("error", out var errorProp))
                     return BadRequest(new { error = errorProp.GetString() });
 
-                // 3. استخراج النتائج بناءً على هيكل الموديل الجديد (Two-Head)
-                // الرأس الأول: هل هو هجوم أم لا؟
+           
                 bool isAnomaly = root.GetProperty("anomaly_head").GetProperty("is_anomaly").GetBoolean();
 
-                // الرأس الثاني: تصنيف نوع الهجوم ونسبة الثقة
+                
                 string prediction = root.GetProperty("classification_head").GetProperty("predicted_class").GetString() ?? "Unknown";
                 double confidenceRaw = root.GetProperty("classification_head").GetProperty("confidence").GetDouble();
-                double confidenceValue = Math.Round(confidenceRaw * 100, 2); // تحويلها لنسبة مئوية نظيفة
-
-                // 4. إنشاء كائن الحدث لحفظه في قاعدة البيانات
+                double confidenceValue = Math.Round(confidenceRaw * 100, 2); 
+              
                 var trafficEvent = new EVENTS
                 {
                     SourceIp = incoming.source_ip ?? "Unknown",
@@ -73,13 +71,13 @@ namespace IPS_PROJECT.Controllers
                     TrafficType = incoming.protocol == 6 ? "TCP" : "UDP",
                     Prediction = prediction,
                     Confidence = confidenceValue,
-                    Status = isAnomaly ? "Blocked" : "Allowed", // القرار يعتمد على رأس الـ Anomaly
+                    Status = isAnomaly ? "Blocked" : "Allowed", 
                     Timestamp = DateTime.Now
                 };
 
                 _context.Events.Add(trafficEvent);
 
-                // 5. التعامل مع التنبيهات الفورية (Alerts)
+                // For Alerts
                 if (trafficEvent.Status == "Blocked")
                 {
                     var notification = new AlertNotification
@@ -88,17 +86,15 @@ namespace IPS_PROJECT.Controllers
                         SourceIp = trafficEvent.SourceIp,
                         DestinationIp = trafficEvent.DestinationIp,
                         Prediction = prediction,
-                        Confidence = trafficEvent.Confidence,
+                        Confidence = confidenceValue,
                         Protocol = trafficEvent.TrafficType,
                         Timestamp = trafficEvent.Timestamp,
-                        IsRead = false,
-                        Status = "Blocked" // مضافة من الكود الجديد لضمان الدقة
+                        IsRead = false
                     };
-
                     _context.AlertNotifications.Add(notification);
+
                     await _context.SaveChangesAsync();
 
-                    // إرسال تنبيه فوري عبر SignalR للـ Dashboard
                     await _hubContext.Clients.All.SendAsync("ReceiveAttackAlert", notification);
                 }
                 else
@@ -112,7 +108,7 @@ namespace IPS_PROJECT.Controllers
                     source_ip = trafficEvent.SourceIp,
                     destination_ip = trafficEvent.DestinationIp,
                     attack_type = prediction,
-                    confidence = $"{trafficEvent.Confidence:F2}%",
+                    confidence = confString,
                     status = trafficEvent.Status
                 });
             }
@@ -122,7 +118,7 @@ namespace IPS_PROJECT.Controllers
             }
         }
 
-        // --- ميزات التحكم القديمة (Control Functions) ---
+        // Control Functions
 
         [HttpGet("ExportTraffic")]
         public async Task<IActionResult> ExportTraffic()

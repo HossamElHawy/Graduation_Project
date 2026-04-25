@@ -45,7 +45,7 @@
                     </div>
 
 
-                     <div class="notification-wrapper" style="position: relative; margin-right: 20px;">
+                    <div class="notification-wrapper" style="position: relative; margin-right: 20px;">
                         <button class="noti-btn" id="notiBtn" style="background: var(--panel-2); border: 1px solid var(--border); color: var(--text); padding: 10px; border-radius: 10px; cursor: pointer; position: relative;">
                             <i class="fa-solid fa-bell"></i>
                             @if (Model.AlertNotifications != null && Model.AlertNotifications.Any(n => !n.IsRead))
@@ -83,7 +83,6 @@
                         </div>
                     </div>
 
-
                     <div id="detailsModal" class="modal-overlay hidden" style="position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 9999; display: flex; align-items: center; justify-content: center;">
                         <div class="modal-content" style="background: var(--panel-2); width: 450px; padding: 20px; border-radius: 12px; border: 1px solid var(--border);">
                             <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border); padding-bottom:10px; margin-bottom:15px;">
@@ -102,7 +101,13 @@
 
             <div class="content">
                 <!-- Page header -->
-                 <div class="head-actions" style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                <div class="page-head">
+                    <div>
+                        <h1 class="page-title">IPS Admin Console</h1>
+                        <p class="page-subtitle">Real-time threat detection and mitigation system status</p>
+                    </div>
+
+                    <div class="head-actions" style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
                         <div class="export-group" style="display: flex; align-items: center; background: var(--panel-2); padding: 6px 14px; border-radius: var(--radius); border: 1px solid var(--border); transition: all 0.3s ease;">
 
                             <div style="display: flex; align-items: center; gap: 10px;">
@@ -122,10 +127,10 @@
                                 <input type="date" id="endDate" class="custom-date-picker" title="End Date">
                             </div>
 
-                            <button class="btn-export-action" type="button" onclick="downloadFilteredReport()"
-                                    style="background: none; border: none; color: var(--blue); cursor: pointer; border-left: 1px solid var(--border); margin-left: 12px; padding-left: 12px; font-weight: 600; display: flex; align-items: center; gap: 6px;">
-                                <i class="fa-solid fa-file-export"></i>
-                                <span>Export</span>
+                            <button class="btn-export-action" type="button" onclick="downloadFilteredReport()" 
+                                   style="background: none; border: none; color: var(--blue); cursor: pointer; border-left: 1px solid var(--border); margin-left: 12px; padding-left: 12px; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+                              <i class="fa-solid fa-file-export"></i>
+                               <span>Export</span>
                             </button>
                         </div>
 
