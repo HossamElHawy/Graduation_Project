@@ -17,12 +17,14 @@ namespace IPS_PROJECT.Controllers
         private readonly AppDbContext _context;
         private readonly AiPredictionService _aiService;
         private readonly IHubContext<IpsHub> _hubContext;
+        private readonly IConfiguration _configuration; // أضفنا هذا السطر
 
-        public TrafficController(AppDbContext context, AiPredictionService aiService, IHubContext<IpsHub> hubContext)
+        public TrafficController(AppDbContext context, AiPredictionService aiService, IHubContext<IpsHub> hubContext, IConfiguration configuration)
         {
             _context = context;
             _aiService = aiService;
             _hubContext = hubContext;
+            _configuration = configuration; // أضفنا هذا السطر
         }
 
         [HttpPost("ProcessTraffic")]
@@ -33,7 +35,6 @@ namespace IPS_PROJECT.Controllers
                 if (incoming == null || incoming.data == null)
                     return BadRequest(new { error = "missing data" });
 
-                
                 var cleanedData = new Dictionary<string, double>();
                 foreach (var item in incoming.data)
                 {
@@ -48,7 +49,6 @@ namespace IPS_PROJECT.Controllers
                 if (!cleanedData.ContainsKey("protocol"))
                     cleanedData["protocol"] = (double)incoming.protocol;
 
-               
                 var rawResult = await _aiService.GetRawPredictionAsync(cleanedData);
                 using var doc = JsonDocument.Parse(rawResult);
                 var root = doc.RootElement;
@@ -56,14 +56,12 @@ namespace IPS_PROJECT.Controllers
                 if (root.TryGetProperty("error", out var errorProp))
                     return BadRequest(new { error = errorProp.GetString() });
 
-           
                 bool isAnomaly = root.GetProperty("anomaly_head").GetProperty("is_anomaly").GetBoolean();
 
-                
                 string prediction = root.GetProperty("classification_head").GetProperty("predicted_class").GetString() ?? "Unknown";
                 double confidenceRaw = root.GetProperty("classification_head").GetProperty("confidence").GetDouble();
-                double confidenceValue = Math.Round(confidenceRaw * 100, 2); 
-              
+                double confidenceValue = Math.Round(confidenceRaw * 100, 2);
+
                 var trafficEvent = new EVENTS
                 {
                     SourceIp = incoming.source_ip ?? "Unknown",
@@ -71,13 +69,12 @@ namespace IPS_PROJECT.Controllers
                     TrafficType = incoming.protocol == 6 ? "TCP" : "UDP",
                     Prediction = prediction,
                     Confidence = confidenceValue,
-                    Status = isAnomaly ? "Blocked" : "Allowed", 
+                    Status = isAnomaly ? "Blocked" : "Allowed",
                     Timestamp = DateTime.Now
                 };
 
                 _context.Events.Add(trafficEvent);
 
-                // For Alerts
                 if (trafficEvent.Status == "Blocked")
                 {
                     var notification = new AlertNotification
@@ -92,9 +89,7 @@ namespace IPS_PROJECT.Controllers
                         IsRead = false
                     };
                     _context.AlertNotifications.Add(notification);
-
                     await _context.SaveChangesAsync();
-
                     await _hubContext.Clients.All.SendAsync("ReceiveAttackAlert", notification);
                 }
                 else
@@ -108,7 +103,7 @@ namespace IPS_PROJECT.Controllers
                     source_ip = trafficEvent.SourceIp,
                     destination_ip = trafficEvent.DestinationIp,
                     attack_type = prediction,
-                    confidence = confString,
+                    confidence = confidenceValue, // تم تعديل confString إلى confidenceValue
                     status = trafficEvent.Status
                 });
             }
@@ -117,8 +112,6 @@ namespace IPS_PROJECT.Controllers
                 return BadRequest(new { error = ex.Message });
             }
         }
-
-        // Control Functions
 
         [HttpGet("ExportTraffic")]
         public async Task<IActionResult> ExportTraffic()
@@ -156,8 +149,8 @@ namespace IPS_PROJECT.Controllers
             try
             {
                 var unreadAlerts = await _context.AlertNotifications
-                                                .Where(n => !n.IsRead)
-                                                .ToListAsync();
+                                                 .Where(n => !n.IsRead)
+                                                 .ToListAsync();
 
                 foreach (var alert in unreadAlerts)
                 {
