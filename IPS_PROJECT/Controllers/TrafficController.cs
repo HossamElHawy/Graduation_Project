@@ -17,14 +17,14 @@ namespace IPS_PROJECT.Controllers
         private readonly AppDbContext _context;
         private readonly AiPredictionService _aiService;
         private readonly IHubContext<IpsHub> _hubContext;
-        private readonly IConfiguration _configuration; // أضفنا هذا السطر
+        private readonly IConfiguration _configuration;
 
         public TrafficController(AppDbContext context, AiPredictionService aiService, IHubContext<IpsHub> hubContext, IConfiguration configuration)
         {
             _context = context;
             _aiService = aiService;
             _hubContext = hubContext;
-            _configuration = configuration; // أضفنا هذا السطر
+            _configuration = configuration;
         }
 
         [HttpPost("ProcessTraffic")]
@@ -35,6 +35,7 @@ namespace IPS_PROJECT.Controllers
                 if (incoming == null || incoming.data == null)
                     return BadRequest(new { error = "missing data" });
 
+                // تحويل البيانات لقاموس
                 var cleanedData = new Dictionary<string, double>();
                 foreach (var item in incoming.data)
                 {
@@ -49,24 +50,28 @@ namespace IPS_PROJECT.Controllers
                 if (!cleanedData.ContainsKey("protocol"))
                     cleanedData["protocol"] = (double)incoming.protocol;
 
+                // استدعاء الموديل
                 var rawResult = await _aiService.GetRawPredictionAsync(cleanedData);
+
                 using var doc = JsonDocument.Parse(rawResult);
                 var root = doc.RootElement;
 
-                if (root.TryGetProperty("error", out var errorProp))
+                // التعامل مع مخرجات الموديل (dense_v5)
+                var result = root.ValueKind == JsonValueKind.Array ? root[0] : root;
+
+                if (result.TryGetProperty("error", out var errorProp))
                     return BadRequest(new { error = errorProp.GetString() });
 
-                bool isAnomaly = root.GetProperty("anomaly_head").GetProperty("is_anomaly").GetBoolean();
+                bool isAnomaly = result.GetProperty("is_anomaly").GetBoolean();
+                string prediction = result.GetProperty("predicted_class").GetString() ?? "Unknown";
+                double confidenceValue = result.GetProperty("class_confidence").GetDouble();
 
-                string prediction = root.GetProperty("classification_head").GetProperty("predicted_class").GetString() ?? "Unknown";
-                double confidenceRaw = root.GetProperty("classification_head").GetProperty("confidence").GetDouble();
-                double confidenceValue = Math.Round(confidenceRaw * 100, 2);
-
+                // حفظ الحدث
                 var trafficEvent = new EVENTS
                 {
                     SourceIp = incoming.source_ip ?? "Unknown",
                     DestinationIp = incoming.destination_ip ?? "Unknown",
-                    TrafficType = incoming.protocol == 6 ? "TCP" : "UDP",
+                    TrafficType = isAnomaly ? "Anomaly" : "Non Anomaly",
                     Prediction = prediction,
                     Confidence = confidenceValue,
                     Status = isAnomaly ? "Blocked" : "Allowed",
@@ -98,20 +103,15 @@ namespace IPS_PROJECT.Controllers
                     await _hubContext.Clients.All.SendAsync("ReceiveRefresh");
                 }
 
-                return Ok(new
-                {
-                    source_ip = trafficEvent.SourceIp,
-                    destination_ip = trafficEvent.DestinationIp,
-                    attack_type = prediction,
-                    confidence = confidenceValue, // تم تعديل confString إلى confidenceValue
-                    status = trafficEvent.Status
-                });
+                return Ok(new { source_ip = trafficEvent.SourceIp, destination_ip = trafficEvent.DestinationIp, attack_type = prediction, confidence = confidenceValue, status = trafficEvent.Status });
             }
             catch (Exception ex)
             {
                 return BadRequest(new { error = ex.Message });
             }
         }
+
+        // --- باقي الدوال (Export, GetDetails, MarkAsRead, Delete, ClearAll) تبقى كما هي دون تغيير ---
 
         [HttpGet("ExportTraffic")]
         public async Task<IActionResult> ExportTraffic()
@@ -185,5 +185,6 @@ namespace IPS_PROJECT.Controllers
             await _context.SaveChangesAsync();
             return Ok();
         }
+
     }
 }
